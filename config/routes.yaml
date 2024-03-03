@@ -3,3 +3,21 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+greetings:
+    path: /pozdrowienia
+    controller: App\Controller\GreetingsController::main
+hobbies:
+    path: /zainteresowania
+    controller: App\Controller\MyHobbiesController::main
+culinaries:
+    path: /przepisy
+    controller: App\Controller\CulinaryRecipesController::main
+index:
+    path: /
+    controller: App\Controller\WelcomeController::main
+hobby:
+    path: /zainteresowania/{passion}
+    controller: App\Controller\HobbyController::main
+hobby_item:
+    path: /zainteresowania/{passion}/{passionItem}
+    controller: App\Controller\HobbyItemController::main

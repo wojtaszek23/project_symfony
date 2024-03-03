@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            {{passion_name}} na eswu.konin.pl
+        </title>
+    
+        <meta charset="utf-8" />
+    
+        <style>
+        * { font-family: verdana; COLOR: black; }
+        b { font-weight: bold; }
+        </style>
+    </head>
+    <body style="background-size:cover; background-color: white">
+    <center>
+    <div style="width: 50%; background-color: white;">
+        <h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">{{passion_name}}</h1>
+            {% for passion in passionItems %}
+                <h2 style="font-size: 25pt; line-height: 2.0;"><a href="./{{passion_name}}/{{passion.name}}">{{passion.name}}</a></h2>
+            {% endfor %}
+    </div>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Pasje na eswu.konin.pl
+        </title>
+    
+        <meta charset="utf-8" />
+    
+        <style>
+        * { font-family: verdana; COLOR: black; }
+        b { font-weight: bold; }
+        </style>
+    </head>
+    <body style="background-size:cover; background-color: white">
+    <center>
+    Nad tą podstroną obecnie pracuję, jestem w trakcie selekcji, pisania i wprowadzania
+    do bazy danych krótkich poradników dotyczących rzeczy, którymi się interesuję. 
+    Wkrótce powinny się pojawić (prawdopodobnie najpóźniej 03.03.2024).
+    <div style="width: 50%; background-color: white;">
+        <h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">Pasje</h1>
+            {% for passion in passions %}
+                <h2 style="font-size: 25pt; line-height: 2.0;"><a href="./zainteresowania/{{passion.name}}">{{passion.name}}</a></h2>
+            {% endfor %}
+    </div>
+    </center>
+    </body>
+</html>

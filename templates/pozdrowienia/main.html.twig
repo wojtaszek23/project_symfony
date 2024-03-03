@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pozdrowienia na eswu.konin.pl</title>
+    </head>
+    <body>
+        <h1>Pozdrowiają:</h1>
+        {% for person in persons %}
+
+            <p style="font-size: 13pt"><b>{{person.person}}</b></p>
+
+        {% endfor %}
+
+        <br>
+        
+        {{form(form)}}
+    </body>
+</html>
