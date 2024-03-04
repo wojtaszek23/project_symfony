@@ -26,6 +26,7 @@ class HobbyController extends AbstractController
         return $this->render('pasja/main.html.twig', 
         [
             'passion_name' => $found->getName(),
+            'passion_description' => $found->getDescription(),
             'passionItems' => $passionItems 
         ]);
         //return new Response("udało się");

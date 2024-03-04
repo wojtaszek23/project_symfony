@@ -1,24 +1,18 @@
-<html>
-    <head>
-        <title>
+{% extends 'main_template.html.twig' %}
+{% block title %}
             {{passion_name}} na eswu.konin.pl
-        </title>
-    
-        <meta charset="utf-8" />
-    
-        <style>
-        * { font-family: verdana; COLOR: black; }
+{% endblock %}
+{% block stylesheets %}
+    <style>
         b { font-weight: bold; }
-        </style>
-    </head>
-    <body style="background-size:cover; background-color: white">
-    <center>
-    <div style="width: 50%; background-color: white;">
-        <h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">{{passion_name}}</h1>
+        body { background-color: skyblue }
+        * { font-family: verdana; COLOR: black; background-color: skyblue }
+    </style>
+{% endblock %}
+{% block center_content %}
+        <h1 style="font-size: 50pt; line-height: 1.0; margin-top: 0.5em;">{{passion_name}}</h1>
+            <p style="line-height: 1.4;">{{passion_description}}</p>
             {% for passion in passionItems %}
                 <h2 style="font-size: 25pt; line-height: 2.0;"><a href="./{{passion_name}}/{{passion.name}}">{{passion.name}}</a></h2>
             {% endfor %}
-    </div>
-    </center>
-    </body>
-</html>
+{% endblock %}

@@ -1,19 +1,15 @@
-<html>
-    <head>
-        <title>
+{% extends 'main_template.html.twig' %}
+{% block title %}
             Symfony na eswu.konin.pl
-        </title>
-    
-        <meta charset="utf-8" />
-    
-        <style>
-        * { font-family: verdana; font-size: 14pt; COLOR: black; }
+{% endblock %}
+{% block stylesheets %}
+    <style>
         b { font-weight: bold; }
-        </style>
-    </head>
-    <body style="background-size:cover; background-color: white">
-    <center>
-    <div style="width: 50%; background-color: white;">
+        body { background-color: #f8f8f8 }
+        * { font-family: verdana; font-size: 14pt; COLOR: black; background-color: #f8f8f8 }
+    </style>
+{% endblock %}
+{% block center_content %}
     <br><br>
     To jest strona robocza projektów, które piszę w Symfony. Do przejrzenia kodu większości moich pozostałych projektów
     zapraszam na <a href="https://www.github.com/wojtaszek23" style="color: inherit;">mój github</a>.
@@ -36,7 +32,4 @@
     -poszerzenie portfolio<br>
     -dostarczenie treści mającej niezerowe szanse na zainteresowanie gościa strony<br>
     -prosta obsługa i szybkie wdrożenie użytkownika bez zniechęcenia - > intuicyjny interfejs.
-    </center>
-    </body>
-    
-</html>
+{% endblock %}
