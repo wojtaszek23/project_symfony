@@ -20,8 +20,8 @@ class PassionItems
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::BLOB, nullable: true)]
-    private $image;
+    #[ORM\Column(length: 255)]
+    private ?string $imageName = null;
 
     #[ORM\ManyToOne(targetEntity: Passions::class, inversedBy: 'passionItems')]
     #[ORM\JoinColumn(nullable: false)]

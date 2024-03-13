@@ -12,11 +12,8 @@ class HobbyController extends AbstractController
 {
     public function main(string $passion, EntityManagerInterface $entityManager) : Response
     {
+        
         $passions = $entityManager->getRepository(Passions::class);
-        /*if(!($passions->contains($passion)))
-        {
-            return $this->redirect('/zainteresowania');
-        }*/
         $found = $passions->findOneBy(['name' => $passion]);
         if($found == null)
         {
@@ -29,6 +26,6 @@ class HobbyController extends AbstractController
             'passion_description' => $found->getDescription(),
             'passionItems' => $passionItems 
         ]);
-        //return new Response("udało się");
+        //return new Response("Właśnie trwają prace nad tą częścią strony. Zapraszam około wieczora.");
     }
 }
