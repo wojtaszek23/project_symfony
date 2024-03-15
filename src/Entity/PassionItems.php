@@ -56,14 +56,14 @@ class PassionItems
         return $this;
     }
 
-    public function getImage()
+    public function getImageName(): ?string
     {
-        return $this->image;
+        return $this->imageName;
     }
 
-    public function setImage($image): static
+    public function setImageName(string $imageName): static
     {
-        $this->image = $image;
+        $this->imageName = $imageName;
 
         return $this;
     }

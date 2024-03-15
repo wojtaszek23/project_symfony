@@ -1,9 +1,20 @@
 {% extends 'base.html.twig' %}
+{% block styles %}
+        menu {flex: 23%; min-height: 100%; padding: 0; margin-right: 1%;}
+        center {flex: 48%; min-height: 100%; padding: 0; margin-left: 1%; margin-right: 1%;}
+        aside {flex: 23%; min-height: 100%; padding: 0; margin-right: 1%;}
+{% endblock %}
 {% block body %}
+    <menu>
+            {% block left_content %}
+            {% endblock %}
+    </menu>
     <center>
-        <div style="width: 50%;">
             {% block center_content %}
             {% endblock %}
-        </div>
     </center>
+    <aside>
+            {% block right_content %}
+            {% endblock %}
+    </aside>
 {% endblock %}

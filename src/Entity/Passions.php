@@ -25,6 +25,9 @@ class Passions
     #[ORM\OneToMany(targetEntity: PassionItems::class, mappedBy: 'passionTypeId', orphanRemoval: true)]
     private Collection $passionItems;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imageName = null;
+
     public function __construct()
     {
         $this->passionItems = new ArrayCollection();
@@ -85,6 +88,18 @@ class Passions
                 $passionItem->setPassionTypeId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(?string $imageName): static
+    {
+        $this->imageName = $imageName;
 
         return $this;
     }

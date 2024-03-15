@@ -12,11 +12,16 @@ class HobbyItemController extends AbstractController
 {
     public function main(string $passion, string $passionItem, EntityManagerInterface $entityManager) : Response
     {
+        $passions = $entityManager->getRepository(Passions::class);
+        $passion = $passions->findOneBy(['name' => $passion]);
         $items = $entityManager->getRepository(PassionItems::class);
         $item = $items->findOneBy(['name' => $passionItem]);
         return $this->render(
             'przedmiot pasji/main.html.twig',
-            ['passion' => $item]     
+            [
+                'passion_item' => $item,
+                'passion' => $passion
+            ]     
         );
     }
 }

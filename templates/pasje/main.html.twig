@@ -5,13 +5,27 @@
 {% block stylesheets %}
     <style>
         b { font-weight: bold; }
-        body { background-color: skyblue }
-        * { font-family: verdana; COLOR: black; background-color: skyblue }
+        * { font-family: verdana; COLOR: black;}
+        menu {
+            background-color: rgba(190, 210, 230, 0.7);
+            height: 100%;
+            border-radius: 10px;
+            margin: 5px;
+        }
     </style>
 {% endblock %}
-{% block center_content %}
-    <h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">Pasje</h1>
+{% block left_content %}
+    <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
+    <div style="text-align: center;">
         {% for passion in passions %}
-            <h2 style="font-size: 25pt; line-height: 2.0;"><a href="./zainteresowania/{{passion.name}}">{{passion.name}}</a></h2>
+            <hr>
+            <h2 style="line-height: 2.0;"><a href="./zainteresowania/{{passion.name}}">{{passion.name}}</a></h2>
         {% endfor %}
+    </div>
+{% endblock %}
+{% block center_content %}
+    <h1 style="font-size: 50pt;">Pasje</h1>
+    <p style="line-height: 1.7; font-size: 22px;">Ta część strony zawiera opis ważnych dla mnie zainteresowań realizowanych z różną
+    intensywnością na przestrzeni moich poszczególnych etapów życia. Dzielę się tutaj doświadczeniami,
+    opinią oraz informacjami na temat przedstawionych pasji. Zapraszam do mam nadzieję, że ciekawej lektury.</p>
 {% endblock %}

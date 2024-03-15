@@ -2,14 +2,33 @@
 {% block title %}
             Pasje na eswu.konin.pl
 {% endblock %}
-{% block stylesheets %}
-    <style>
-        * { font-family: verdana; COLOR: black; background-color: lightgray; }
+        {% block bodystyle %}
+        body {
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                    url({{passion.imageName}});
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        {% endblock %}
+{% block styles %}
+        * { font-family: verdana; COLOR: black;}
         b { font-weight: bold; }
-        body { background-color: lightgray; }
-    </style>
+        menu {flex: 10; min-height: 100%; padding: 0; margin: 0;}
+        center {flex: 80%; min-height: 100%; padding: 0; margin: 0;}
+        aside {flex: 10; padding: 0; margin: 0;}
+{% endblock %}
+{% block left_content %}
+    <button onclick="location.href = '/zainteresowania/{{passion.name}}';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; {{passion.name}}</button>
 {% endblock %}
 {% block center_content %}
-    <h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">{{passion.name}}</h1>
-    <p style="line-height: 1.4; font-size: 13pt;">{{passion.description|nl2br}}</p>
+    <!--h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">{{passion_item.name}}</h1-->
+    {% if passion_item.imageName != null %}
+    <img src={{passion_item.imageName}} style="max-width: 100%; max-height: 30%; margin-top: 10%;"></img>
+    {% endif %}
+    <p style="line-height: 1.4; font-size: 13pt; width: 70%;">{{passion_item.description|nl2br}}</p>
 {% endblock %}

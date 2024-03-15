@@ -24,6 +24,7 @@ class HobbyController extends AbstractController
         [
             'passion_name' => $found->getName(),
             'passion_description' => $found->getDescription(),
+            'passion_image_name' => $found->getImageName(),
             'passionItems' => $passionItems 
         ]);
         //return new Response("Właśnie trwają prace nad tą częścią strony. Zapraszam około wieczora.");

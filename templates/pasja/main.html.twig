@@ -4,15 +4,34 @@
 {% endblock %}
 {% block stylesheets %}
     <style>
+        body {
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                    url({{passion_image_name}});
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+        }
         b { font-weight: bold; }
-        body { background-color: skyblue }
-        * { font-family: verdana; COLOR: black; background-color: skyblue }
+        * { font-family: verdana; COLOR: black;}
+        menu {
+            background-color: rgba(190, 210, 230, 0.7);
+            height: 100%;
+            border-radius: 10px;
+            margin: 5px;
+        }
     </style>
 {% endblock %}
+{% block left_content %}
+    <button onclick="location.href = '/zainteresowania';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Ogólna lista zainteresowań</button>
+    <div style="text-align: center;">
+    {% for passion in passionItems %}
+        <hr>
+        <h2 style="line-height: 2.0;"><a href="./{{passion_name}}/{{passion.name}}">{{passion.name}}</a></h2>
+    {% endfor %}
+    </div>
+{% endblock %}
 {% block center_content %}
-        <h1 style="font-size: 50pt; line-height: 1.0; margin-top: 0.5em;">{{passion_name}}</h1>
-            <p style="line-height: 1.4;">{{passion_description}}</p>
-            {% for passion in passionItems %}
-                <h2 style="font-size: 25pt; line-height: 2.0;"><a href="./{{passion_name}}/{{passion.name}}">{{passion.name}}</a></h2>
-            {% endfor %}
+    <h1 style="font-size: 50pt;">{{passion_name}}</h1>
+    <p style="line-height: 1.4;">{{passion_description}}</p>
 {% endblock %}
