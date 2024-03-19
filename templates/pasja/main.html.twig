@@ -5,7 +5,7 @@
 {% block stylesheets %}
     <style>
         body {
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+            background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
                     url({{passion_image_name}});
             background-size:contain;
             background-repeat: no-repeat;
@@ -33,5 +33,5 @@
 {% endblock %}
 {% block center_content %}
     <h1 style="font-size: 50pt;">{{passion_name}}</h1>
-    <p style="line-height: 1.4;">{{passion_description}}</p>
+    <p style="line-height: 1.4; font-size: 22px;">{{passion_description}}</p>
 {% endblock %}

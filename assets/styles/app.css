@@ -1,1 +1,47 @@
+.form-container {
+    width: 90%; /* Ustawienie szerokości kontenera formularza */
+    margin: 0 auto; /* Wyśrodkowanie kontenera formularza */
+}
 
+/* Stylowanie poszczególnych pól formularza */
+.form-field {
+    margin-bottom: 20px; /* Dodanie odstępu między polami formularza */
+}
+
+/* Stylowanie przycisku "Dodaj Przepis" */
+.btn-submit {
+    background-color: #007bff; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu przycisku */
+    padding: 10px 20px; /* Rozmiar i wypełnienie przycisku */
+    border: none; /* Usunięcie obramowania przycisku */
+    border-radius: 5px; /* Zaokrąglenie krawędzi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+/* Dodatkowe ostylowanie dla pola z plikiem */
+.file-input {
+    margin-top: 10px; /* Dodanie odstępu między polem z plikiem a poprzednim polem */
+}
+
+.form-control {
+    font-size: 16pt;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 50pt;
+}
+
+h2 {
+    line-height: 2.0;
+}
+
+b { font-weight: bold; }
+* { font-family: verdana; COLOR: black; overflow-wrap: break-word; line-height: 1.3;}
+
+hr {
+    color: white;
+}

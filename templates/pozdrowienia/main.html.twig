@@ -1,18 +1,38 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Pozdrowienia na eswu.konin.pl</title>
-    </head>
-    <body>
-        <h1>Pozdrowiają:</h1>
-        {% for person in persons %}
+{% extends 'main_template.html.twig' %}
 
-            <p style="font-size: 13pt"><b>{{person.person}}</b></p>
+{% block title %}Pozdrowienia na eswu.konin.pl{% endblock %}
 
-        {% endfor %}
+{% block alpha1 %}{{0.4}}{% endblock %} {% block alpha2 %}{{0.4}}{% endblock %}
 
-        <br>
-        
-        {{form(form)}}
-    </body>
-</html>
+{% block stylesheets %}
+<style>
+    menu, aside {
+        margin-top: 1vh;
+    }
+</style>
+{% endblock %}
+
+{% block left_content %}
+    <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
+{% endblock %}
+
+{% block center_content %}
+<h1>Pozdrowiają:</h1>
+    {% for person in persons %}
+        <p style="font-size: 20pt;"><b>{{person.person}}</b></p>
+    {% endfor %}
+    
+    <br>
+{% endblock %}
+
+{% block right_content %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.person) }}
+        {{ form_widget(form.person) }}
+    </div>
+    <hr style="font-size: 4pt; visibility:hidden;" />
+    <div class="form-group">
+        {{ form_widget(form.pozdrowienia, {'attr': {'style': 'font-size: 16px; padding-left: 5%; padding-right: 5%;'}}) }}
+    </div>
+{% endblock %}

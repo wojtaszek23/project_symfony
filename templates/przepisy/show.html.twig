@@ -1,0 +1,25 @@
+{% extends 'przepisy/main.html.twig' %}
+{% block alpha1 %}{{0.5}}{% endblock %} {% block alpha2 %}{{0.5}}{% endblock %}
+{% block left_content2 %}
+    <div style="text-align: center;">
+    <br>
+    <hr>
+    <h2 style="font-size: 2.0em;">Składniki:</h2>
+    {% for ingredient in chosen_recipe.ingredients %}
+        <hr>
+        <h2></u><b>{{ingredient.name}}</b></u></h2>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block center_content %}
+    <h1>{{chosen_recipe.name}}</h1>
+    
+    <img src={{chosen_recipe.imageName}} style="max-width: 100%; max-height: 30%; border-radius: 10px;"></img>
+    
+    <h2 style="font-size: 2.0em;">{{chosen_recipe.shortDescription}}</h2>
+    <hr>
+    <h2 style="font-size: 2.0em;">Przygotowanie:</h2>
+    <p style="font-size: 1.7em; text-align: left; width: 90%;">{{chosen_recipe.preparation|nl2br}}</p>
+    <hr>
+    <p style="font-size: 1.4em; text-align: right;">{{chosen_recipe.createdAt|date('d-m-Y')}}</p>
+{% endblock %}
