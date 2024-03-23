@@ -36,7 +36,7 @@ class CulinaryRecipesController extends AbstractController
                 $file->move($this->getParameter('images_directory'),$fileName);
                 $recipe->setImageName('/images/cooking_recipes/'.$fileName);
             }
-
+            $recipe->setCreatedAt(new \DateTimeImmutable());
             $entityManager->persist($recipe);
             $entityManager->flush();
 
