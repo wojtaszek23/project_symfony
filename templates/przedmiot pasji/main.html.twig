@@ -3,6 +3,7 @@
             Pasje na eswu.konin.pl
 {% endblock %}
         {% block bodystyle %}
+        {{ parent() }}
         body {
             background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
                     url({{passion.imageName}});
@@ -18,9 +19,9 @@
 {% block styles %}
         * { font-family: verdana; COLOR: black;}
         b { font-weight: bold; }
-        menu {flex: 10; min-height: 100%; padding: 0; margin: 0;}
+        menu {flex: 10%; min-height: 100%; padding: 0; margin: 0;}
         center {flex: 80%; min-height: 100%; padding: 0; margin: 0;}
-        aside {flex: 10; padding: 0; margin: 0;}
+        aside {flex: 10%; padding: 0; margin: 0;}
 {% endblock %}
 {% block left_content %}
     <button onclick="location.href = '/zainteresowania/{{passion.name}}';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; {{passion.name}}</button>

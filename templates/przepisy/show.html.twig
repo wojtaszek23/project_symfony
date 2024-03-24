@@ -1,25 +1,28 @@
 {% extends 'przepisy/main.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
 {% block alpha1 %}{{0.5}}{% endblock %} {% block alpha2 %}{{0.5}}{% endblock %}
 {% block left_content2 %}
     <div style="text-align: center;">
-    <br>
     <hr>
-    <h2 style="font-size: 2.0em;">Składniki:</h2>
+    <h2>Składniki:</h2>
     {% for ingredient in chosen_recipe.ingredients %}
         <hr>
-        <h2></u><b>{{ingredient.name}}</b></u></h2>
+        <h3>{{ingredient.name}}</h3>
     {% endfor %}
     </div>
 {% endblock %}
 {% block center_content %}
-    <h1>{{chosen_recipe.name}}</h1>
+    <h1 style="font-size: 40pt; margin: 1%;">{{chosen_recipe.name}}</h1>
     
-    <img src={{chosen_recipe.imageName}} style="max-width: 100%; max-height: 30%; border-radius: 10px;"></img>
-    
-    <h2 style="font-size: 2.0em;">{{chosen_recipe.shortDescription}}</h2>
+    <img src={{chosen_recipe.imageName}} style="min-width: 5%;min-height: 5%; max-width: 100%; max-height: 30%; border-radius: 10px;"></img>
+    <div style="clear: both"></div>
     <hr>
-    <h2 style="font-size: 2.0em;">Przygotowanie:</h2>
-    <p style="font-size: 1.7em; text-align: left; width: 90%;">{{chosen_recipe.preparation|nl2br}}</p>
+    <p style="font-size: 1.4em; text-align: left; width: 90%;"><b>{{chosen_recipe.shortDescription}}</b></p>
     <hr>
-    <p style="font-size: 1.4em; text-align: right;">{{chosen_recipe.createdAt|date('d-m-Y')}}</p>
+    <h2>Przygotowanie:</h2>
+    <p style="font-size: 1.4em; line-height: 1.4; text-align: left; width: 90%;">{{chosen_recipe.preparation|nl2br}}</p>
+    <hr>
+    <p style="font-size: 1.0em; text-align: right;">{{chosen_recipe.createdAt|date('d-m-Y')}}</p>
 {% endblock %}
