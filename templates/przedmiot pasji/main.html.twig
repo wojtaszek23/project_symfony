@@ -7,13 +7,14 @@
         body {
             background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
                     url({{passion.imageName}});
-            background-size:contain;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            min-height: 100vh;
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
+            background-size: contain;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                background-position: center;
+                background-attachment: fixed;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
         }
         {% endblock %}
 {% block styles %}

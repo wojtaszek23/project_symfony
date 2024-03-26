@@ -13,7 +13,7 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    <body {% block body_class %}class="main_body"{% endblock %}>
         {% block body %}{% endblock %}
         <!--script>
             var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

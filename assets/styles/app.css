@@ -1,13 +1,60 @@
+menu {flex: 22%; max-width: 22%; min-height: 100%; padding: 0; margin: 1%;}
+center {flex: 48%; min-height: 100%; padding: 0; margin: 1%;}
+aside {flex: 22%; max-width: 22%; min-height: 100%; padding: 0; margin: 1%;}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin: 0;
+    padding: 1.0%;
+}
+
+.przepisy_menu
+{
+    background-color: rgba(94, 162, 128, 0.5);
+}
+
+.przepisy_aside
+{
+    background-color: rgba(100, 170, 200, 0.5);
+}
+
 button
 {
     cursor: pointer;
 }
 
+menu, aside
+{
+    height: 100%;
+    border-radius: 10px;
+}
+
 b { font-weight: bold; }
-* { font-family: verdana; COLOR: black; overflow-wrap: break-word; line-height: 1.3;}
+* { font-family: verdana; overflow-wrap: break-word; line-height: 1.3;}
+
+hr {
+    color: white;
+}
+
+a {
+    color: black;
+}
 
 @media (min-width: 992px)
+{
+    menu, aside
     {
+        margin: 5px;
+    }
+
     .form-container {
         width: 90%; /* Ustawienie szerokości kontenera formularza */
         margin: 0 auto; /* Wyśrodkowanie kontenera formularza */
@@ -37,27 +84,23 @@ b { font-weight: bold; }
         font-size: 16pt;
     }
 
-    a {
-        color: black;
-    }
-
     h1 {
         font-size: 50pt;
-    }
-
-    hr {
-        color: white;
     }
 }
 
 @media (max-width: 991px)
 {
-    h2 {
-        line-height: 1.3;
-        font-size: 2.0em;
+    menu, center, aside
+    {
+        min-width: 98%;
     }
-    h3 {
-        line-height: 1.3;
-        font-size: 1.5em;
+    h2, h3
+    {
+        padding: 0;
+        margin: 0;
+    }
+    .form-control {
+        background-color: whitesmoke;
     }
 }
