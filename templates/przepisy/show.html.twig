@@ -4,12 +4,13 @@
 {% endblock %}
 {% block alpha1 %}{{0.5}}{% endblock %} {% block alpha2 %}{{0.5}}{% endblock %}
 {% block left_content2 %}
-    <div style="text-align: center;">
+    <div class="przepisy_left">
     <hr>
     <h2>Składniki:</h2>
+    <hr>
     {% for ingredient in chosen_recipe.ingredients %}
-        <hr>
         <h3>{{ingredient.name}}</h3>
+        <hr>
     {% endfor %}
     </div>
 {% endblock %}

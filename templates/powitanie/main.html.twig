@@ -4,27 +4,67 @@
 {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    <style>
-        b { font-weight: bold; }
-        body { color: black; font-size: 14pt;}
-        * { font-family: verdana;}
-        #uwaga {color: red;}
-    </style>
 {% endblock %}
-{% block center_content %}
-    <br><br>
-    To jest strona robocza projektów, które piszę w Symfony. Do przejrzenia kodu większości moich pozostałych projektów
-    zapraszam na <a href="https://www.github.com/wojtaszek23" style="color: inherit;">mój github</a>.
-    Tymczasowo na tej stronie pozostałe projekty webowe są niedostępne z przyczyn migracyjnych do frameworka Symfony i potrzeby refactoringu, który zajmie mi trochę czasu.
-    Poniżej zamieszczam listę obecnie realizowanych projektów:
-    <br><br><br>
-    <p><b><a href="./zainteresowania" style="color: inherit;">Moje hobby</a></b></p>
-    <br><br>
-    <p><b><a href="./przepisy" style="color: inherit;">Przepisy kucharskie</a></b></p>
-    <br><br>
-    <p><b><a href="./pozdrowienia" style="color: inherit;">Księga Gości</a></b></p>
-    <br><br><br>
-    Wybór projektów do napisania wybrałem w oparciu o cele, które sobie wytyczyłem
+{% block body %}
+<div style="text-align: center;">
+    Cześć! <br>
+    Na tej stronie znajdują się moje projekty webowe (rozwijane i zakończone).<br>
+    Obecnie zajmuję się przepisywaniem kodu wcześniej zrealizowanych projektów do frameworka Symfony.<br>
+    Do przejrzenia kodu większości moich pozostałych projektów
+    zapraszam na <a href="https://www.github.com/wojtaszek23" style="color: inherit;">mój github</a>.<br>
+    Poniżej zamieszczam listę aktualnie dostępnych na stronie projektów:
+    <br>
+    <br>
+
+    <div style="text-align: center;">
+        
+    <a href="./zainteresowania" style="color: inherit; display: inline-block; ">
+    <div style="border: 4px groove gray; float: left; padding-bottom: 20px; padding-top:0px; height: 300px;">
+    <figure>
+    <img src="/images/hobby2.jpg" style="border-radius: 10px;"></img>
+    <figcaption style="color: green; font-size: 16pt;">Blog osobisty! Zapraszam! :)</figcaption>
+    </figure>
+    </div>
+    </a>
+    
+    <a href="./pozdrowienia" style="color: inherit; display: inline-block; ">
+    <div style="border: 4px groove gray; float: left; padding-bottom: 20px; padding-top:0px; height: 300px;">
+    <figure>
+    <img src="/images/greetings.png" style="border-radius: 10px;"></img>
+    <figcaption style="color: green; font-size: 16pt;">Księga Gości</figcaption>
+    </figure>
+    </div>
+    </a>
+    
+    </div>
+    
+    <div style="clear: both;"/>
+    
+    <div style="text-align: center;">
+    
+    <a href="./snake" style="color: inherit; display: inline-block; ">
+    <div style="border: 4px groove gray; float: left; padding-bottom: 20px; padding-top:0px; height: 300px;">
+    <figure>
+    <img src="/images/snakeScreen.png" style="border-radius: 10px;"></img>
+    <figcaption style="color: green; font-size: 16pt;">Gra Wąż (tylko na PC z klawiaturą)</figcaption>
+    </figure>
+    </div>
+    </a>
+
+    <a href="./przepisy" style="color: inherit; display: inline-block; ">
+        <div style="border: 4px groove gray; float: left; padding-bottom: 20px; padding-top:0px; height: 300px;">
+            <figure>
+                <img src="/images/cookingScreen.png" style="border-radius: 10px;"></img>
+                <figcaption style="color: green; font-size: 16pt;">Przepisy Kulinarne</figcaption>
+            </figure>
+        </div>
+    </a>
+    
+    </div>
+
+    <br>
+
+    Wybór nowych projektów do napisania wybrałem w oparciu o cele, które sobie wytyczyłem
     oraz założenia uwzględniające jak najszybsze zdobycie umiejętności programowania w Symfony.<br><br>
     Założenia, które sobie wytyczyłem to:<br>
     -prostota projektów i szybkość wdrożenia<br>
@@ -34,4 +74,5 @@
     -poszerzenie portfolio<br>
     -dostarczenie treści mającej niezerowe szanse na zainteresowanie gościa strony<br>
     -prosta obsługa i szybkie wdrożenie użytkownika bez zniechęcenia - > intuicyjny interfejs.
+</div>
 {% endblock %}

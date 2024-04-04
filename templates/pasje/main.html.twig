@@ -4,19 +4,12 @@
 {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    <style>
-        
-        menu {
-            background-color: rgba(190, 210, 230, 0.7);
-            height: 100%;
-            border-radius: 10px;
-            margin: 5px;
-        }
-    </style>
 {% endblock %}
 {% block left_content %}
-    <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
-    <div style="text-align: center;">
+    <div class="pasje_left">
+        <div style="text-align: left;">
+        <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
+        </div>
         {% for passion in passions %}
             <hr>
             <h2 style="line-height: 2.0;"><a href="./zainteresowania/{{passion.name}}">{{passion.name}}</a></h2>

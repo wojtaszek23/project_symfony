@@ -27,3 +27,6 @@ hobby:
 hobby_item:
     path: /zainteresowania/{passion}/{passionItem}
     controller: App\Controller\HobbyItemController::main
+snake:
+    path: /snake
+    controller: App\Controller\SnakeController::main

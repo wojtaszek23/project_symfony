@@ -8,7 +8,6 @@
     {{ parent() }}
 {% endblock %}
 
-{% block menu_class %}przepisy_menu{% endblock %}
 {% block left_content %}
     <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
     {% block left_content2 %}
@@ -19,13 +18,13 @@
     <h2>W tej części strony, poświęconej kulinariom możesz poznawać nowe przepisy oraz dodawać własne.</h2>
 {% endblock %}
 
-{% block aside_class %}przepisy_aside{% endblock %}
 {% block right_content %}
     <button onclick="location.href = '/przepisy/dodaj';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">Nowy przepis :)</button>
-    <div style="text-align: center;">
+    <div class="przepisy_right">
+    <hr>
     {% for recipe in recipes %}
-        <hr>
         <h2><a href="/przepisy/widok/{{recipe.name}}">{{recipe.name}}</h2>
+        <hr>
     {% else %}
 
     {% endfor %}

@@ -2,15 +2,17 @@
 
 {% block title %}Pozdrowienia na eswu.konin.pl{% endblock %}
 
-{% block alpha1 %}{{0.4}}{% endblock %} {% block alpha2 %}{{0.4}}{% endblock %}
-
 {% block stylesheets %}
+{{parent()}}
 <style>
     menu, aside {
         margin-top: 1vh;
     }
 </style>
 {% endblock %}
+
+{% block alpha1 %}{{0.4}}{% endblock %} {% block alpha2 %}{{0.4}}{% endblock %}
+{% block background_image %}images/gory.jpg{% endblock %}
 
 {% block left_content %}
     <button onclick="location.href = '/';" style="min-width: 50%; min-height: 5%; font-size: 20px; margin: 5%; border-radius: 10px;">&xlarr; Strona główna</button>
