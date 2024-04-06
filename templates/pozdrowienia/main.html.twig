@@ -21,9 +21,11 @@
 {% block center_content %}
 <h1>Pozdrowiają:</h1>
     {% for person in persons %}
+        <hr>
         <p style="font-size: 20pt;"><b>{{person.person}}</b></p>
     {% endfor %}
-    
+        <hr>
+
     <br>
 {% endblock %}
 

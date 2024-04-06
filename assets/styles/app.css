@@ -48,6 +48,36 @@ menu > div {
     background-color: rgba(100, 170, 200, 0.5);
 }
 
+.subsite_box:hover
+{
+    filter: brightness(1.05);
+    transform: scale(1.01);
+    /*
+    transform: rotate(-5deg) translateX(-35px);
+    transition: 0.75s;
+    animation: sway 2.0s linear infinite;
+    animation-delay: 0.75s;
+    */
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-5deg) translateX(-35px);
+    }
+    25% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: rotate(5deg) translateX(35px);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: rotate(-5deg) translateX(-35px);
+    }
+}
+
 button
 {
     cursor: pointer;

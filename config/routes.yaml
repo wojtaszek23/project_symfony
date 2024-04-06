@@ -30,3 +30,6 @@ hobby_item:
 snake:
     path: /snake
     controller: App\Controller\SnakeController::main
+piano:
+    path: /piano
+    controller: App\Controller\PianoController::main

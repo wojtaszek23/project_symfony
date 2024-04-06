@@ -153,6 +153,9 @@ checkKeyStart = function(e){
         case 85: // 'u'
             game_difficulty = 5;
             break;
+        case 82: // 'r'
+            window.location.href = '/';
+            break;
     }
 
     if (game_difficulty > 0)
@@ -342,7 +345,13 @@ context.font = "italic bold 40px Arial";
 context.textAlign = "center";
 context.textBaseline = "middle";
 context.fillStyle = "#FFFFFF";
-context.fillText("v-ery easy | e-asy | m-edium | h-ard | u-ltimate", 500, 400);
+context.fillText("v-ery easy | e-asy | m-edium | h-ard | u-ltimate", 500, 375);
+
+context.font = "italic bold 40px Arial";
+context.textAlign = "center";
+context.textBaseline = "middle";
+context.fillStyle = "#FFFFFF";
+context.fillText("r - to return to the homepage", 500, 450);
 }
 
 function drawEndText(){
