@@ -48,6 +48,14 @@ menu > div {
     background-color: rgba(100, 170, 200, 0.5);
 }
 
+.subsite_box
+{
+    float: left;
+    padding-bottom: 20px;
+    padding-top:0px;
+    height: 300px;
+}
+
 .subsite_box:hover
 {
     filter: brightness(1.05);
@@ -95,6 +103,57 @@ a {
     color: black;
 }
 
+.back-button {
+    min-width: 50%;
+    min-height: 5%;
+    font-size: 20px;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.back-button:hover {
+    filter: brightness(0.95);
+}
+
+img {
+    border-radius: 10px;
+}
+
+.passion-item-description {
+    line-height: 1.4;
+    font-size: 22px;
+}
+
+.passion-item-description {
+    line-height: 1.5;
+    font-size: 13pt;
+}
+
+.passion-item-image {
+    max-width: 100%;
+    max-height: 30%;
+    margin-top: 10%;
+}
+
+.homepage-links {
+    color: inherit;
+    display: inline-block;
+}
+
+.btn-submit {
+    background-color: #007bff; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu przycisku */
+    padding: 10px 20px; /* Rozmiar i wypełnienie przycisku */
+    border: none; /* Usunięcie obramowania przycisku */
+    border-radius: 5px; /* Zaokrąglenie krawędzi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+.homepage-figcaption {
+    color: green;
+    font-size: 16pt;
+}
+
 @media (min-width: 992px)
 {
     menu, aside
@@ -110,16 +169,6 @@ a {
     /* Stylowanie poszczególnych pól formularza */
     .form-field {
         margin-bottom: 20px; /* Dodanie odstępu między polami formularza */
-    }
-
-    /* Stylowanie przycisku "Dodaj Przepis" */
-    .btn-submit {
-        background-color: #007bff; /* Kolor tła przycisku */
-        color: #fff; /* Kolor tekstu przycisku */
-        padding: 10px 20px; /* Rozmiar i wypełnienie przycisku */
-        border: none; /* Usunięcie obramowania przycisku */
-        border-radius: 5px; /* Zaokrąglenie krawędzi przycisku */
-        cursor: pointer; /* Zmiana kursora na wskaźnik */
     }
 
     /* Dodatkowe ostylowanie dla pola z plikiem */

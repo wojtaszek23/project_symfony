@@ -103,6 +103,10 @@ html, body
     grid-area: 1 / 1 / span 1 / span 1;
     cursor: pointer;
   }
+  #button_back:hover
+  {
+    filter: brightness(0.95);
+  }
   #radio_states
   {
     justify-content: center;
