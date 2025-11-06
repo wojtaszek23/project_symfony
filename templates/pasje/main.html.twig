@@ -1,0 +1,24 @@
+{% extends 'main_template.html.twig' %}
+{% block title %}
+    Pasje na eswu.konin.pl
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block left_content %}
+    <div class="pasje_left">
+        <div style="text-align: left;">
+        <button onclick="location.href = '/';" class="back-button">&xlarr; Strona główna</button>
+        </div>
+        {% for passion in passions %}
+            <hr>
+            <h2 style="line-height: 2.0;"><a href="./zainteresowania/{{passion.name}}">{{passion.name}}</a></h2>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block center_content %}
+    <h1>Pasje</h1>
+    <p style="line-height: 1.7; font-size: 22px;">Ta część strony zawiera opis moich zainteresowań realizowanych z różną
+    intensywnością na przestrzeni poszczególnych etapów życia. Dzielę się tutaj doświadczeniami,
+    opinią oraz informacjami na temat przedstawionych pasji. Zapraszam do mam nadzieję, że ciekawej lektury.</p>
+{% endblock %}

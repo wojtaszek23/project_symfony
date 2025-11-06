@@ -1,0 +1,55 @@
+{% extends 'przepisy/main.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block center_content %}
+    <div class="form-container">
+        <h1>Dodaj przepis</h1>
+        
+        <div style="text-align: left;">
+        {{ form_start(form) }}
+        <hr>
+        <div class="form-group">
+            <h2>{{ form_label(form.name, 'Nazwa przepisu:', {'label_attr': {'class': 'form-label'}}) }}</h2>
+            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <hr>
+        <div class="form-group">
+            <h2>{{ form_label(form.shortDescription, 'Krótki opis:', {'label_attr': {'class': 'form-label'}}) }}</h2>
+            {{ form_widget(form.shortDescription, {'attr': {'class': 'form-control', 'rows': 3, 'style': 'width: 100%; resize: none;'}}) }}
+        </div>
+        <hr>
+        <div class="form-group">
+            <h2>{{ form_label(form.preparation, 'Przygotowanie:', {'label_attr': {'class': 'form-label'}}) }}</h2>
+            {{ form_widget(form.preparation, {'attr': {'class': 'form-control', 'rows': 10, 'style': 'width: 100%; resize: none;'}}) }}
+        </div>
+        <hr>
+        <div class="form-group">
+            <h2>{{ form_label(form.image, 'Zdjęcie:', {'label_attr': {'class': 'form-label'}}) }}</h2>
+            {{ form_widget(form.image, {'attr': {'class': 'form-control file-input'}}) }}
+        </div>
+        <hr>
+        <div class="form-group">
+            <h2>Składniki:</h2>
+            <div id="ingredients" data-prototype="{{ form_widget(form.ingredients.vars.prototype)|e }}">
+                {{ form_widget(form.ingredients) }}
+            </div>
+        </div>
+        <hr style="font-size: 4pt; visibility:hidden;">
+        <div class="form-group"  style="display: inline-block;">
+            <button type="button" id="addIngredient" class="btn btn-primary">Dodaj składnik</button>
+        </div>
+        <div class="form-group" style="display: inline-block;">
+            <button type="button" id="removeIngredient" class="btn btn-primary">Usuń składnik</button>
+        </div>
+        <hr>
+        <div class="form-group">
+            {{ form_widget(form.save, {'attr': {'class': 'btn-submit'}}) }}
+        </div>
+        
+        {{ form_end(form) }}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ asset('addCookingRecipe.js') }}">Nie udało się załadować skryptu o nazwie:addCookingRecipe.js</script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'main_template.html.twig' %}
+
+{% block alpha1 %}{{0.2}}{% endblock %} {% block alpha2 %}{{0.2}}{% endblock %}
+
+{% block background_image %}/images/kartka.jpg{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block left_content %}
+    <button onclick="location.href = '/';" class="back-button">&xlarr; Strona główna</button>
+    {% block left_content2 %}
+    {% endblock %}
+{% endblock %}
+
+{% block center_content %}
+    <h2>W tej części strony, poświęconej kulinariom możesz poznawać nowe przepisy oraz dodawać własne.</h2>
+{% endblock %}
+
+{% block right_content %}
+    <button onclick="location.href = '/przepisy/dodaj';" class="back-button">Nowy przepis :)</button>
+    <div class="przepisy_right">
+    <hr>
+    {% for recipe in recipes %}
+        <h2><a href="/przepisy/widok/{{recipe.name}}">{{recipe.name}}</h2>
+        <hr>
+    {% else %}
+
+    {% endfor %}
+    </div>
+{% endblock %}

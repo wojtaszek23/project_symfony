@@ -1,0 +1,17 @@
+{% extends 'main_template.html.twig' %}
+{% block title %}
+            Pasje na eswu.konin.pl
+{% endblock %}
+
+{% block alpha1 %}0.7{% endblock %} {% block alpha2 %}0.7{% endblock %}
+{% block background_image %}{{passion.imageName}}{% endblock %}
+{% block left_content %}
+    <button onclick="location.href = '/zainteresowania/{{passion.name}}';" class="back-button">&xlarr; {{passion.name}}</button>
+{% endblock %}
+{% block center_content %}
+    <!--h1 style="font-size: 50pt; line-height: 2.0; margin-top: 0.5em;">{{passion_item.name}}</h1-->
+    {% if passion_item.imageName != null %}
+        <img src={{passion_item.imageName}} class="passion-item-image"></img>
+    {% endif %}
+    <p class="passion-item-description">{{passion_item.description|nl2br}}</p>
+{% endblock %}

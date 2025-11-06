@@ -1,0 +1,42 @@
+{% extends 'main_template.html.twig' %}
+
+{% block title %}Pozdrowienia na eswu.konin.pl{% endblock %}
+
+{% block stylesheets %}
+{{parent()}}
+<style>
+    menu, aside {
+        margin-top: 1vh;
+    }
+</style>
+{% endblock %}
+
+{% block alpha1 %}{{0.4}}{% endblock %} {% block alpha2 %}{{0.4}}{% endblock %}
+{% block background_image %}images/gory.jpg{% endblock %}
+
+{% block left_content %}
+    <button onclick="location.href = '/';" class="back-button">&xlarr; Strona główna</button>
+{% endblock %}
+
+{% block center_content %}
+<h1>Pozdrowiają:</h1>
+    {% for person in persons %}
+        <hr>
+        <p style="font-size: 20pt;"><b>{{person.person}}</b></p>
+    {% endfor %}
+        <hr>
+
+    <br>
+{% endblock %}
+
+{% block right_content %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.person) }}
+        {{ form_widget(form.person) }}
+    </div>
+    <hr style="font-size: 4pt; visibility:hidden;" />
+    <div class="form-group">
+        {{ form_widget(form.pozdrowienia, {'attr': {'style': 'font-size: 16px; padding-left: 5%; padding-right: 5%;'}}) }}
+    </div>
+{% endblock %}

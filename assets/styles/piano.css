@@ -1,0 +1,130 @@
+html, body
+  {
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  #container
+  {
+    height:100%;
+    width:100%;
+    display: grid;
+    background-color: gray;
+    grid: 1fr 50px 5fr 204px 50px/ 1fr 972px 1fr;
+  }
+  #keyboard
+  {
+    display: grid;
+    grid-template-columns: repeat(72,12.5px);
+    grid-template-rows: 100px / 100px;
+    grid-area: 4 / 2 / span 1 / span 1;
+    gap: 1px;
+  }
+  .key_white
+  {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: white;
+    grid-area: 1 / 1 / span 2 / span 2;
+    border-color: black;
+    padding: 0 0 0 0;
+    border: 0;
+    margin: 0;
+    font-size: 20px;
+    border-radius: 2%;
+  }
+  .key_white:hover
+  {
+    background-color: #CCCCCC;
+  }
+  .key_white:focus
+  {
+    outline: none;
+    box-shadow: none;
+  }
+  .key_white_playing
+  {
+    background-color: #4477BB;
+  }
+  .key_white_playing:active
+  {
+    background-color: #4477BB;
+  }
+  .key_white_playing:hover
+  {
+    background-color: #4477BB;
+  }
+  .key_black
+  {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: black;
+    z-index:1;
+    grid-area: 1 / 1 / span 1 / span 2;
+    padding: 0 0 0 0;
+    border: 0;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 2%;
+  }
+  .key_black:focus
+  {
+    outline: none;
+    box-shadow: none;
+  }
+  .key_black:hover
+  {
+    background-color: #222222;
+  }
+  .key_black_playing
+  {
+    background-color: #933333;
+  }
+  .key_black_playing:active
+  {
+    background-color: #933333;
+  }
+  .key_black_playing:hover
+  {
+    background-color: #933333;
+  }
+  #button_back
+  {
+    width: 80%;
+    margin: 1em;
+    border-radius: 10px;
+    justify-content: center;
+    grid-area: 1 / 1 / span 1 / span 1;
+    cursor: pointer;
+  }
+  #button_back:hover
+  {
+    filter: brightness(0.95);
+  }
+  #radio_states
+  {
+    justify-content: center;
+    grid-area: 2 / 1 / span 1 / span 1;
+    margin: 1em;
+  }
+  .key_editing
+  {
+    z-index: 1;
+    border: green solid 2px;
+  }
+  .key_editing:focus
+  {
+    border: green solid 2px;
+    z-index: 1;
+  }
+  .key_editing:hover
+  {
+    border: green solid 2px;
+    z-index: 1;
+  }

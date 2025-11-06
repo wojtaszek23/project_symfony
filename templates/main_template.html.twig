@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        {% block bodystyle %}
+            body
+            {
+                background: linear-gradient(rgba(255,255,255,{% block alpha1 %}0.7{% endblock %}), rgba(255,255,255,{% block alpha2 %}0.7{% endblock %})),
+                url(
+                    {% block background_image %}
+                        images/gory.jpg
+                    {% endblock %}
+                );
+            }
+        {% endblock %}
+    </style>
+{% endblock %}
+{% block body %}
+    <menu class="{% block menu_class %}{% endblock %}">
+        {% block left_content %}
+        {% endblock %}
+    </menu>
+    <center class="{% block center_class %}{% endblock %}">
+        {% block center_content %}
+        {% endblock %}
+    </center>
+    <aside class="{% block aside_class %}{% endblock %}">
+        {% block right_content %}
+        {% endblock %}
+    </aside>
+{% endblock %}

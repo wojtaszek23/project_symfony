@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <title>Pianino cyfrowe</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ asset('piano.css') }}" type="text/css" />
+</head>
+
+<body>
+  <div id="container" onmousedown="return false">
+    <button id="button_back" onclick="location.href = '/';">&xlarr; Strona główna</button>
+    <div id="radio_states">
+      <input type="radio" id="play_state" name="play_edit_state" value="play">Tryb grania</input>
+      </br>
+      <input type="radio" id="edit_state" name="play_edit_state" value="edit">Przypisywanie klawiszy</input>
+    </div>
+    <div id="keyboard">
+      <button class="key_white" style="grid-column-start: 1;"></button>
+      <button class="key_black" style="grid-column-start: 2;"></button>
+      <button class="key_white" style="grid-column-start: 3;"></button>
+      <button class="key_black" style="grid-column-start: 4;"></button>
+      <button class="key_white" style="grid-column-start: 5;"></button>
+      <button class="key_white" style="grid-column-start: 7;"></button>
+      <button class="key_black" style="grid-column-start: 8;"></button>
+      <button class="key_white" style="grid-column-start: 9;"></button>
+      <button class="key_black" style="grid-column-start: 10;"></button>
+      <button class="key_white" style="grid-column-start: 11;"></button>
+      <button class="key_black" style="grid-column-start: 12;"></button>
+      <button class="key_white" style="grid-column-start: 13;"></button>
+      
+      <button class="key_white" style="grid-column-start: 15;"></button>
+      <button class="key_black" style="grid-column-start: 16;"></button>
+      <button class="key_white" style="grid-column-start: 17;"></button>
+      <button class="key_black" style="grid-column-start: 18;"></button>
+      <button class="key_white" style="grid-column-start: 19;"></button>
+      <button class="key_white" style="grid-column-start: 21;"></button>
+      <button class="key_black" style="grid-column-start: 22;"></button>
+      <button class="key_white" style="grid-column-start: 23;"></button>
+      <button class="key_black" style="grid-column-start: 24;"></button>
+      <button class="key_white" style="grid-column-start: 25;"></button>
+      <button class="key_black" style="grid-column-start: 26;"></button>
+      <button class="key_white" style="grid-column-start: 27;"></button>
+      
+      <button class="key_white" style="grid-column-start: 29;"></button>
+      <button class="key_black" style="grid-column-start: 30;"></button>
+      <button class="key_white" style="grid-column-start: 31;"></button>
+      <button class="key_black" style="grid-column-start: 32;"></button>
+      <button class="key_white" style="grid-column-start: 33;"></button>
+      <button class="key_white" style="grid-column-start: 35;"></button>
+      <button class="key_black" style="grid-column-start: 36;"></button>
+      <button class="key_white" style="grid-column-start: 37;"></button>
+      <button class="key_black" style="grid-column-start: 38;"></button>
+      <button class="key_white" style="grid-column-start: 39;"></button>
+      <button class="key_black" style="grid-column-start: 40;"></button>
+      <button class="key_white" style="grid-column-start: 41;"></button>
+      
+      <button class="key_white" style="grid-column-start: 43;"></button>
+      <button class="key_black" style="grid-column-start: 44;"></button>
+      <button class="key_white" style="grid-column-start: 45;"></button>
+      <button class="key_black" style="grid-column-start: 46;"></button>
+      <button class="key_white" style="grid-column-start: 47;"></button>
+      <button class="key_white" style="grid-column-start: 49;"></button>
+      <button class="key_black" style="grid-column-start: 50;"></button>
+      <button class="key_white" style="grid-column-start: 51;"></button>
+      <button class="key_black" style="grid-column-start: 52;"></button>
+      <button class="key_white" style="grid-column-start: 53;"></button>
+      <button class="key_black" style="grid-column-start: 54;"></button>
+      <button class="key_white" style="grid-column-start: 55;"></button>
+      
+      <button class="key_white" style="grid-column-start: 57;"></button>
+      <button class="key_black" style="grid-column-start: 58;"></button>
+      <button class="key_white" style="grid-column-start: 59;"></button>
+      <button class="key_black" style="grid-column-start: 60;"></button>
+      <button class="key_white" style="grid-column-start: 61;"></button>
+      <button class="key_white" style="grid-column-start: 63;"></button>
+      <button class="key_black" style="grid-column-start: 64;"></button>
+      <button class="key_white" style="grid-column-start: 65;"></button>
+      <button class="key_black" style="grid-column-start: 66;"></button>
+      <button class="key_white" style="grid-column-start: 67;"></button>
+      <button class="key_black" style="grid-column-start: 68;"></button>
+      <button class="key_white" style="grid-column-start: 69;"></button>
+      
+      <button class="key_white" style="grid-column-start: 71;"></button>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ asset('piano.js') }}"></script>
+</body>

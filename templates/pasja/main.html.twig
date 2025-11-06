@@ -1,0 +1,21 @@
+{% extends 'main_template.html.twig' %}
+{% block title %}
+            {{passion_name}} na eswu.konin.pl
+{% endblock %}
+
+{% block alpha1 %}0.4{% endblock %} {% block alpha2 %}0.4{% endblock %}
+{% block background_image %}{{passion_image_name}}{% endblock %}
+
+{% block left_content %}
+    <button onclick="location.href = '/zainteresowania';" class="back-button">&xlarr; Ogólna lista zainteresowań</button>
+    <div style="text-align: center;">
+    {% for passion in passionItems %}
+        <hr>
+        <h2 style="line-height: 2.0;"><a href="./{{passion_name}}/{{passion.name}}">{{passion.name}}</a></h2>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block center_content %}
+    <h1>{{passion_name}}</h1>
+    <p class="passion-description">{{passion_description}}</p>
+{% endblock %}

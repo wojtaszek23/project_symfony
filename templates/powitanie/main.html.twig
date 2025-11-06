@@ -1,0 +1,90 @@
+{% extends 'main_template.html.twig' %}
+{% block title %}
+            Symfony na eswu.konin.pl
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+<div style="text-align: center;">
+    Kod strony wraz z paroma innymi projektami można znaleźć <a href="https://www.github.com/wojtaszek23">klikając w ten link (github)</a><br>
+    <br>
+    <br>
+
+    <div style="text-align: center;">
+        <a href="./zainteresowania" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                    <img src="/images/hobby2.jpg"></img>
+                    <figcaption class="homepage-figcaption">Blog osobisty</figcaption>
+                </figure>
+            </div>
+        </a>
+        <a href="./pozdrowienia" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                    <img src="/images/greetings.png"></img>
+                    <figcaption class="homepage-figcaption">Księga Gości</figcaption>
+                </figure>
+            </div>
+        </a>
+    </div>
+    
+    <div style="clear: both;"/>
+    
+    <div style="text-align: center;">
+        <a href="./snake" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                    <img src="/images/snakeScreen.png"></img>
+                    <figcaption class="homepage-figcaption">Gra Wąż (tylko na PC z klawiaturą)</figcaption>
+                </figure>
+            </div>
+        </a>
+        <a href="./przepisy" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                    <img src="/images/cookingScreen.png"></img>
+                    <figcaption class="homepage-figcaption">Przepisy Kulinarne</figcaption>
+                </figure>
+            </div>
+        </a>
+    </div>
+
+    <div style="clear: both;"/>
+
+    <div style="text-align: center;">
+        <a href="./piano" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                <img src="/images/pianoScreen.png"></img>
+                <figcaption class="homepage-figcaption">Pianino Cyfrowe Online</figcaption>
+                </figure>
+            </div>
+        </a>
+        <a href="/chat" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                    <img src="/images/chatScreen.png"></img>
+                    <figcaption class="homepage-figcaption">Czat</figcaption>
+                </figure>
+            </div>
+        </a>
+    </div>
+
+    <div style="clear: both;"/>
+
+    <div style="text-align: center;">
+        <a href="/dailyTasks" class="homepage-links">
+            <div class="subsite_box">
+                <figure>
+                <img src="/images/dailyTasksScreen.png"></img>
+                <figcaption class="homepage-figcaption">Codzienne Wyzwania</figcaption>
+                </figure>
+            </div>
+        </a>
+    </div>
+
+    <br>
+</div>
+{% endblock %}

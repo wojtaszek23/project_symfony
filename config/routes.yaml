@@ -3,3 +3,33 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+index:
+    path: /
+    controller: App\Controller\WelcomeController::main
+snake:
+    path: /snake
+    controller: App\Controller\SnakeController::main
+piano:
+    path: /piano
+    controller: App\Controller\PianoController::main
+greetings:
+    path: /pozdrowienia
+    controller: App\Controller\GreetingsController::main
+culinaries:
+    path: /przepisy
+    controller: App\Controller\CulinaryRecipesController::main
+add_recipe:
+    path: /przepisy/dodaj
+    controller: App\Controller\CulinaryRecipesController::add
+culinary:
+    path: /przepisy/widok/{recipe}
+    controller: App\Controller\CulinaryRecipesController::show
+hobbies:
+    path: /zainteresowania
+    controller: App\Controller\MyHobbiesController::main
+hobby:
+    path: /zainteresowania/{passion}
+    controller: App\Controller\HobbyController::main
+hobby_item:
+    path: /zainteresowania/{passion}/{passionItem}
+    controller: App\Controller\HobbyItemController::main
