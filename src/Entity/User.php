@@ -33,10 +33,10 @@ class User
     #[ORM\Column]
     private ?\DateTime $joining_time = null;
 
-    #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $logged_in_chat = null;
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private ?bool $logged_in_chat = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTime $last_activity_time_in_chat = null;
 
     public function getId(): ?int
@@ -123,12 +123,12 @@ class User
         return $this;
     }
 
-    public function getLoggedInChat(): ?int
+    public function getLoggedInChat(): ?bool
     {
         return $this->logged_in_chat;
     }
 
-    public function setLoggedInChat(int $logged_in_chat): static
+    public function setLoggedInChat(bool $logged_in_chat): static
     {
         $this->logged_in_chat = $logged_in_chat;
 
